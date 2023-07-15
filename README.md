@@ -132,14 +132,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
           
 ![Screenshot (129)](GUI%20OUTPUT/Screenshots/Screenshot%20(129).png)
 
-### Screenshot (130)
-          
-![Screenshot (130)](GUI%20OUTPUT/Screenshots/Screenshot%20(130).png)
-
-### Screenshot (131)
-          
-![Screenshot (131)](GUI%20OUTPUT/Screenshots/Screenshot%20(131).png)
-
 ### Screenshot (132)
           
 ![Screenshot (132)](GUI%20OUTPUT/Screenshots/Screenshot%20(132).png)
