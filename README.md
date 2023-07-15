@@ -51,8 +51,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Acknowledgements
 
-- The project was developed as part of a course assignment or personal project.
-- Any additional acknowledgements or credits.
+- The project was developed as part of a personal project.
+- Tkinter Documentation.
 
 
 
