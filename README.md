@@ -25,9 +25,7 @@ The Advanced Student Management System is a software application that allows edu
 
 ## Installation
 
-1. Clone the repository:
-
-git clone https://github.com/jha-aditya14/Advanced-Student-Management-System.git
+1. Clone the repository: git clone https://github.com/jha-aditya14/Advanced-Student-Management-System.git
 
 2. Navigate to the project directory: cd Advanced-Student-Management-System
 
