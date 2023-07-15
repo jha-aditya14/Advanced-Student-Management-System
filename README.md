@@ -54,6 +54,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - The project was developed as part of a personal project.
 - Tkinter Documentation.
 
+## Screenshots
+
+### Screenshot (111)
+
+![Screenshot (111)](GUI%20OUTPUT/Screenshots/Screenshot%20(111).png)
 
 
 
