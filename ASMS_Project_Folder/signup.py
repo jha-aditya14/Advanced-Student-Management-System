@@ -24,20 +24,20 @@ class win2:
         self.root.geometry("1350x700+0+0")
         self.root.configure(background = "black")
         bg_color="#074463"
-        self.bg_icon = ImageTk.PhotoImage(file="img//1360-x-768-wallpapers-universe-scenery-hd-1360x768.jpg")
+        self.bg_icon = ImageTk.PhotoImage(file="ASMS_Project_Folder//img//1360-x-768-wallpapers-universe-scenery-hd-1360x768.jpg")
         bg_lbl = Label(self.root, image = self.bg_icon).pack(fill=Y) # we put image into our window
 
-       # self.bg_icon = ImageTk.PhotoImage(file="img//beautiful-landscape-nature-scenery-1d-1360x768.jpg")
-        self.F2 = ImageTk.PhotoImage(file="img//download1.jpeg") # here we store image to a variable using PIL module help 
-        self.icon1=ImageTk.PhotoImage(file="img//download.jpg")
-        self.icon2=ImageTk.PhotoImage(file="img//download (1).png")
-        self.icon3=ImageTk.PhotoImage(file="img//download.png")
-        self.icon4=ImageTk.PhotoImage(file="img//images.jpg")
-        self.user_icon=ImageTk.PhotoImage(file="img//images.png")
-        self.pasw_icon=ImageTk.PhotoImage(file="img//images (1).png")
+       # self.bg_icon = ImageTk.PhotoImage(file="ASMS_Project_Folder//img//beautiful-landscape-nature-scenery-1d-1360x768.jpg")
+        self.F2 = ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download1.jpeg") # here we store image to a variable using PIL module help 
+        self.icon1=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download.jpg")
+        self.icon2=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download (1).png")
+        self.icon3=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download.png")
+        self.icon4=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//images.jpg")
+        self.user_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//images.png")
+        self.pasw_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//images (1).png")
 
 
-        #self.signup_icon=ImageTk.PhotoImage(file="img//signup.jpg")
+        #self.signup_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//signup.jpg")
         
 
         #title=LabelFrame(self.root, bd=10, relief=GROOVE, text="SignUp",font=("times new roman", 40, "bold"),bg=bg_color,fg="gold")

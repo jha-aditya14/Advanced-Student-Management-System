@@ -18,7 +18,7 @@ from matplotlib import pyplot as plt
 
 
 #--------
-#self.F2 = ImageTk.PhotoImage(file="img//download1.jpeg") # here we store image to a variable using PIL module help 
+#self.F2 = ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download1.jpeg") # here we store image to a variable using PIL module help 
 
 class win1:
     def __init__(self,root):
@@ -30,22 +30,22 @@ class win1:
         bg_color ="#FFFFF6"
         
         #-----------F1----------------------------------------------------------------------------------------------------
-        self.bg_icon = ImageTk.PhotoImage(file="img//1222596.jpg")
+        self.bg_icon = ImageTk.PhotoImage(file="ASMS_Project_Folder//img//1222596.jpg")
         bg_lbl = Label(self.root, image = self.bg_icon).pack(fill=Y) # we put image into our window
-        self.clock_icon=ImageTk.PhotoImage(file="img//download (2).png")
-        self.student_icon=ImageTk.PhotoImage(file="img//images (1).jpg")
-        self.icon1=ImageTk.PhotoImage(file="img//download.jpg")
-        self.icon2=ImageTk.PhotoImage(file="img//linked_in.png")
+        self.clock_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download (2).png")
+        self.student_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//images (1).jpg")
+        self.icon1=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download.jpg")
+        self.icon2=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//linked_in.png")
         #----------------------------------------------------------------
 
-        self.home_icon=ImageTk.PhotoImage(file="img//Home.png")
-        self.mangEmp_icon=ImageTk.PhotoImage(file="img//Manage_Emp.png")
-        self.mangStd_icon=ImageTk.PhotoImage(file="img//Manage_Stud.png")
-        self.ViewStd_icon=ImageTk.PhotoImage(file="img//View_Stud.png")
-        self.viewall_icon=ImageTk.PhotoImage(file="img//View.jpg")
+        self.home_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Home.png")
+        self.mangEmp_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Manage_Emp.png")
+        self.mangStd_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Manage_Stud.png")
+        self.ViewStd_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//View_Stud.png")
+        self.viewall_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//View.jpg")
         
-        self.change_pasw_icon=ImageTk.PhotoImage(file="img//Change_pasw.png")
-        self.exit_icon=ImageTk.PhotoImage(file="img//Exit.png")
+        self.change_pasw_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Change_pasw.png")
+        self.exit_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Exit.png")
 
 #-----------------------------------------Variables---------------------------------------------
 

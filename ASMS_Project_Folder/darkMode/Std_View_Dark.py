@@ -15,7 +15,7 @@ from phonenumbers.phonenumberutil import region_code_for_number
 from phonenumbers.phonenumberutil import region_code_for_country_code
 
 #--------
-#self.F2 = ImageTk.PhotoImage(file="img//download1.jpeg") # here we store image to a variable using PIL module help 
+#self.F2 = ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download1.jpeg") # here we store image to a variable using PIL module help 
 
 class win1:
     def __init__(self,root):
@@ -27,27 +27,27 @@ class win1:
         bg_color ="#FFFFF6"
         
         #-----------F1----------------------------------------------------------------------------------------------------
-        #self.bg_icon = ImageTk.PhotoImage(file="img//1222596.jpg")
+        #self.bg_icon = ImageTk.PhotoImage(file="ASMS_Project_Folder//img//1222596.jpg")
         #bg_lbl = Label(self.root, image = self.bg_icon).pack(fill=Y) # we put image into our window
-        self.clock_icon=ImageTk.PhotoImage(file="img//Clock_Dark.png")
-        self.student_icon=ImageTk.PhotoImage(file="img//images (1).jpg")
+        self.clock_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Clock_Dark.png")
+        self.student_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//images (1).jpg")
 
 
-        self.icon1=ImageTk.PhotoImage(file="img//download.jpg")
-        self.icon2=ImageTk.PhotoImage(file="img//download (1).png")
-        self.icon3=ImageTk.PhotoImage(file="img//download.png")
-        self.icon4=ImageTk.PhotoImage(file="img//images.jpg")
-        self.icon5=ImageTk.PhotoImage(file="img//linked_in.png")
+        self.icon1=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download.jpg")
+        self.icon2=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download (1).png")
+        self.icon3=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download.png")
+        self.icon4=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//images.jpg")
+        self.icon5=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//linked_in.png")
 
         
-        self.home_icon=ImageTk.PhotoImage(file="img//Home_dark.png")
-        self.mangEmp_icon=ImageTk.PhotoImage(file="img//Manage_Emp_dark.png")
-        self.mangStd_icon=ImageTk.PhotoImage(file="img//Manage_Student_dark.png")
-        self.ViewStd_icon=ImageTk.PhotoImage(file="img//View_Std_dark.png")
-        self.viewall_icon=ImageTk.PhotoImage(file="img//View_All_dark.png")
+        self.home_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Home_dark.png")
+        self.mangEmp_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Manage_Emp_dark.png")
+        self.mangStd_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Manage_Student_dark.png")
+        self.ViewStd_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//View_Std_dark.png")
+        self.viewall_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//View_All_dark.png")
         
-        self.change_pasw_icon=ImageTk.PhotoImage(file="img//Reset_dark.png")
-        self.exit_icon=ImageTk.PhotoImage(file="img//Exit_dark.png")
+        self.change_pasw_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Reset_dark.png")
+        self.exit_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Exit_dark.png")
 
 #-----------------------------------------Variables---------------------------------------------
 

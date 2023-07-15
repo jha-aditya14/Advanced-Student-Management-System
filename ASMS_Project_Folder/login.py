@@ -19,14 +19,14 @@ class win1:
         bg_color ="#2B547E"
         
         #-----------Storing -------image to variables-------------------
-        self.bg_icon = ImageTk.PhotoImage(file="img//beautiful-landscape-nature-scenery-1d-1360x768.jpg")
-        self.F2 = ImageTk.PhotoImage(file="img//download1.jpeg") # here we store image to a variable using PIL module help 
-        self.icon1=ImageTk.PhotoImage(file="img//download.jpg")
-        self.icon2=ImageTk.PhotoImage(file="img//download (1).png")
-        self.icon3=ImageTk.PhotoImage(file="img//download.png")
-        self.icon4=ImageTk.PhotoImage(file="img//images.jpg")
-        self.user_icon=ImageTk.PhotoImage(file="img//images.png")
-        self.pasw_icon=ImageTk.PhotoImage(file="img//images (1).png")
+        self.bg_icon = ImageTk.PhotoImage(file="ASMS_Project_Folder//img//beautiful-landscape-nature-scenery-1d-1360x768.jpg")
+        self.F2 = ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download1.jpeg") # here we store image to a variable using PIL module help 
+        self.icon1=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download.jpg")
+        self.icon2=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download (1).png")
+        self.icon3=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download.png")
+        self.icon4=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//images.jpg")
+        self.user_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//images.png")
+        self.pasw_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//images (1).png")
 
 
         self.email=StringVar()

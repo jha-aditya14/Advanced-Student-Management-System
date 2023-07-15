@@ -34,28 +34,28 @@ class win1:
 #-----------------------------------------------------------------------Image Initialization------------------------------------------------------------------------------------------
 
 
-        self.bg_icon = ImageTk.PhotoImage(file="img//1222596.jpg")
+        self.bg_icon = ImageTk.PhotoImage(file="ASMS_Project_Folder//img//1222596.jpg")
         bg_lbl = Label(self.root, image = self.bg_icon).pack(fill=Y) # we put image into our window
-        self.clock_icon=ImageTk.PhotoImage(file="img//download (2).png")
-        self.student_icon=ImageTk.PhotoImage(file="img//images (1).jpg")
+        self.clock_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download (2).png")
+        self.student_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//images (1).jpg")
 
 
-        self.icon1=ImageTk.PhotoImage(file="img//download.jpg")
-        self.icon2=ImageTk.PhotoImage(file="img//download (1).png")
-        self.icon3=ImageTk.PhotoImage(file="img//download.png")
-        self.icon4=ImageTk.PhotoImage(file="img//images.jpg")
-        self.icon5=ImageTk.PhotoImage(file="img//youtube.png")
-        self.icon6=ImageTk.PhotoImage(file="img//linked_in.png")
+        self.icon1=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download.jpg")
+        self.icon2=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download (1).png")
+        self.icon3=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//download.png")
+        self.icon4=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//images.jpg")
+        self.icon5=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//youtube.png")
+        self.icon6=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//linked_in.png")
 
         
-        self.home_icon=ImageTk.PhotoImage(file="img//Home.png")
-        self.mangEmp_icon=ImageTk.PhotoImage(file="img//Manage_Emp.png")
-        self.mangStd_icon=ImageTk.PhotoImage(file="img//Manage_Stud.png")
-        self.ViewStd_icon=ImageTk.PhotoImage(file="img//View_Stud.png")
-        self.viewall_icon=ImageTk.PhotoImage(file="img//View.jpg")
+        self.home_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Home.png")
+        self.mangEmp_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Manage_Emp.png")
+        self.mangStd_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Manage_Stud.png")
+        self.ViewStd_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//View_Stud.png")
+        self.viewall_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//View.jpg")
         
-        self.change_pasw_icon=ImageTk.PhotoImage(file="img//Change_pasw.png")
-        self.exit_icon=ImageTk.PhotoImage(file="img//Exit.png")
+        self.change_pasw_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Change_pasw.png")
+        self.exit_icon=ImageTk.PhotoImage(file="ASMS_Project_Folder//img//Exit.png")
 
         #**********************************************Variables F!****************************************************************************
         self.fname=StringVar()
@@ -446,7 +446,7 @@ class win1:
         self.FM21 =LabelFrame(FM2,bd=5,relief=GROOVE, text="Profile" ,font=20)
         self.FM21.place(x=0,y=100,relwidth=1,height=400 )
         
-        self.imag_icon = ImageTk.PhotoImage(file="img//image_icon.png")
+        self.imag_icon = ImageTk.PhotoImage(file="ASMS_Project_Folder//img//image_icon.png")
         self.FM22 =LabelFrame(self.FM21,bd=5,relief=SUNKEN)
         self.FM22.place(x=0,y=10,width=140,height=140 )
         lb_pic=Label(self.FM22,image=self.imag_icon)
