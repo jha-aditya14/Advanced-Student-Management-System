@@ -207,7 +207,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ### Screenshot (150)
           
 ![Screenshot (150)](GUI%20OUTPUT/Screenshots/Screenshot%20(150).png)
-
-### Screenshot (151)
-          
-![Screenshot (151)](GUI%20OUTPUT/Screenshots/Screenshot%20(151).png)
