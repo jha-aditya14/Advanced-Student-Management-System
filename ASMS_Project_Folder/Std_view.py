@@ -309,6 +309,8 @@ class win1:
         cv2.destroyAllWindows()
         btn_Fb = Button(self.F5,relief=RAISED,command=self.link2,image=self.icon1).place(x=80,y=410,anchor="w")
         btn_LI = Button(self.F5,relief=RAISED,command=self.link1,height=23,image=self.icon2).place(x=20,y=410,anchor="w")
+        self.F6 = Frame(self.F5,bd=5,relief=SUNKEN,bg="light gray")
+        self.F6.place(x=20,y=100,width=215,height=200 )
 
     def close(self):
         self.root.destroy()
@@ -347,25 +349,28 @@ class win1:
 
                     btn_Fb = Button(self.F5,relief=RAISED,command=self.link12,image=self.icon1).place(x=80,y=410,anchor="w")
                     btn_LI = Button(self.F5,relief=RAISED,command=self.link11,height=23,image=self.icon2).place(x=20,y=410,anchor="w")
-                    lbl = Label(self.F5,text="Click on Screen To Hide Image",font=("times now roman",25,"bold"),bg="light gray").place(x=250,y=410,anchor="w")
+                    lbl = Label(self.F5,text="",font=("times now roman",25,"bold"),bg="light gray").place(x=250,y=410,anchor="w")
                     #print((i[16]))
-                    winname=(str(i[1])+" "+str(i[2]))
-                    c=i[16]
-                    d=str(c)
-                    a=list(d)
-                    #print (a)
-                    a.pop()
-                    f=''.join(a)
-                    print("\n********************************\n")
-                    try:
-                        img =cv2.imread(f)
-                        img1=cv2.resize(img,(210,133))
-                        cv2.namedWindow(winname)        # Create a named window
-                        cv2.moveWindow(winname, 217,327)  # Move it to (217,327)
-                        cv2.imshow(winname, img1)
-                        #cv2.waitKey()
-                    except Exception:
-                            return messagebox("Error","Image mage be to Small to Load or not Exist")
+                    
+                    import io
+                    image_data = i[16]
+                    image = Image.open(io.BytesIO(image_data))
+
+                    # Resize the image to fit the desired frame size with anti-aliasing
+                    desired_width = 205
+                    desired_height = 160
+                    image = image.resize((desired_width, desired_height), Image.LANCZOS)
+
+                    self.imag_icon = ImageTk.PhotoImage(image)
+                    self.F6 = Frame(self.F5,bd=5,relief=SUNKEN,bg="light gray")
+                    self.F6.place(x=20,y=100,width=215,height=200 )
+                    lb_pic = Label(self.F6, image=self.imag_icon)
+                    lb_pic.place(x=0, y=0, height=desired_height, width=desired_width)    
+                    txt2 = Label(self.F6,text="Student ID: ",width=20,anchor="w",font=("times new roman",13,"bold"),bg="gray")
+                    txt2.place(x=0,y=165)
+                    txt2_lbl = Entry(self.F6,width=12,state="readonly",textvariable=self.Std_Id,font=("times new roman",13,"bold"),bg="gray")
+                    txt2_lbl.place(x=90,y=165)
+                      
             else:
                 return messagebox.showerror("Error","Invalid Roll No.")
 
@@ -396,25 +401,26 @@ class win1:
                                     
                     btn_Fb = Button(self.F5,relief=RAISED,command=self.link12,image=self.icon1).place(x=80,y=410,anchor="w")
                     btn_LI = Button(self.F5,relief=RAISED,command=self.link11,height=23,image=self.icon2).place(x=20,y=410,anchor="w")
-                    lbl = Label(self.F5,text="Click on Screen To Hide Image",font=("times now roman",25,"bold"),bg="light gray").place(x=250,y=410,anchor="w")
+                    lbl = Label(self.F5,text="",font=("times now roman",25,"bold"),bg="light gray").place(x=250,y=410,anchor="w")
                     #print((i[16]))
-                    winname=(str(i[1])+" "+str(i[2]))
-                    c=i[16]
-                    d=str(c)
-                    a=list(d)
-                    #print (a)
-                    a.pop()
-                    f=''.join(a)
-                    print("\n********************************\n")
-                    try:
-                        img =cv2.imread(f)
-                        img1=cv2.resize(img,(210,133))
-                        cv2.namedWindow(winname)        # Create a named window
-                        cv2.moveWindow(winname, 217,327)  # Move it to (217,327)
-                        cv2.imshow(winname, img1)
-                        #cv2.waitKey()
-                    except Exception:
-                            return messagebox("Error","Image mage be to Small to Load or not Exist")
+                    import io
+                    image_data = i[16]
+                    image = Image.open(io.BytesIO(image_data))
+
+                    # Resize the image to fit the desired frame size with anti-aliasing
+                    desired_width = 205
+                    desired_height = 160
+                    image = image.resize((desired_width, desired_height), Image.LANCZOS)
+
+                    self.imag_icon = ImageTk.PhotoImage(image)
+                    self.F6 = Frame(self.F5,bd=5,relief=SUNKEN,bg="light gray")
+                    self.F6.place(x=20,y=100,width=215,height=200 )
+                    lb_pic = Label(self.F6, image=self.imag_icon)
+                    lb_pic.place(x=0, y=0, height=desired_height, width=desired_width)    
+                    txt2 = Label(self.F6,text="Student ID: ",width=20,anchor="w",font=("times new roman",13,"bold"),bg="gray")
+                    txt2.place(x=0,y=165)
+                    txt2_lbl = Entry(self.F6,width=12,state="readonly",textvariable=self.Std_Id,font=("times new roman",13,"bold"),bg="gray")
+                    txt2_lbl.place(x=90,y=165)
             else:
                 return messagebox.showerror("Error","Invalid Student ID")
         
@@ -447,26 +453,26 @@ class win1:
                         self.link.set(i[16])
                         btn_Fb = Button(self.F5,relief=RAISED,command=self.link12,image=self.icon1).place(x=80,y=410,anchor="w")
                         btn_LI = Button(self.F5,relief=RAISED,command=self.link11,height=23,image=self.icon2).place(x=20,y=410,anchor="w")
-                        lbl = Label(self.F5,text="Click on Screen To Hide Image",font=("times now roman",25,"bold"),bg="light gray").place(x=250,y=410,anchor="w")
+                        lbl = Label(self.F5,text="",font=("times now roman",25,"bold"),bg="light gray").place(x=250,y=410,anchor="w")
                         #print((i[16]))
-                        winname=(str(i[1])+" "+str(i[2]))
-                        c=i[16]
-                        d=str(c)
-                        a=list(d)
-                        #print (a)
-                        a.pop()
-                        f=''.join(a)
-                        print("\n********************************\n")
+                        import io
+                        image_data = i[16]
+                        image = Image.open(io.BytesIO(image_data))
 
-                        try:
-                            img =cv2.imread(f)
-                            img1=cv2.resize(img,(210,133))
-                            cv2.namedWindow(winname)        # Create a named window
-                            cv2.moveWindow(winname, 217,327)  # Move it to (217,327)
-                            cv2.imshow(winname, img1)
-                            #cv2.waitKey()
-                        except Exception:
-                                return messagebox("Error","Image mage be to Small to Load or not Exist")
+                        # Resize the image to fit the desired frame size with anti-aliasing
+                        desired_width = 205
+                        desired_height = 160
+                        image = image.resize((desired_width, desired_height), Image.LANCZOS)
+
+                        self.imag_icon = ImageTk.PhotoImage(image)
+                        self.F6 = Frame(self.F5,bd=5,relief=SUNKEN,bg="light gray")
+                        self.F6.place(x=20,y=100,width=215,height=200 )
+                        lb_pic = Label(self.F6, image=self.imag_icon)
+                        lb_pic.place(x=0, y=0, height=desired_height, width=desired_width)    
+                        txt2 = Label(self.F6,text="Student ID: ",width=20,anchor="w",font=("times new roman",13,"bold"),bg="gray")
+                        txt2.place(x=0,y=165)
+                        txt2_lbl = Entry(self.F6,width=12,state="readonly",textvariable=self.Std_Id,font=("times new roman",13,"bold"),bg="gray")
+                        txt2_lbl.place(x=90,y=165)
                 else:
                     return messagebox.showerror("Error","Invalid Contact")
             except ValueError:

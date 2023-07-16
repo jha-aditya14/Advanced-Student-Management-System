@@ -471,9 +471,11 @@ class win1:
     
     #messagebox.showinfo("Info","Add Data First then Upload Pic")
     def add(self):
-        self.filename = filedialog.askopenfilename(initialdir = "/", title ="Upload Image", filetype=(("jpeg","*jpg"),("All Files","*.*"))) 
+        self.filename = filedialog.askopenfilename(initialdir="/", title="Upload Image", filetypes=(("JPEG files", "*.jpeg"), ("JPG files", "*.jpg"), ("All Files", "*.*")))
         self.lbl=Label(self.F4,text="")
-
+        with open(self.filename, 'rb') as f:
+            self.image_data = f.read()
+    
         if self.filename=="":
             return messagebox.showerror("Error!","Please Upload Photo ")
         
@@ -532,7 +534,7 @@ class win1:
 
             self.conn=sqlite3.connect("sdms.db")
             self.c=self.conn.cursor()
-            self.c.execute("CREATE TABLE IF NOT EXISTS Std(Std_ID TEXT UNIQUE NOT NULL ,First_name TEXT NOT NULL, Last_name TEXT , Roll TEXT PRIMARY KEY UNIQUE NOT NULL, code TEXT NOT NULL, contact TEXT NOT NULL, country TEXT, Class TEXT NOT NULL, address TEXT NOT NULL, Department TEXT NOT NULL, DOB TEXT, Email TEXT , Semester TEXT NOT NULL, Gender TEXT , L_URL TEXT,F_URL TEXT, PIC_LINK TEXT)")
+            self.c.execute("CREATE TABLE IF NOT EXISTS Std(Std_ID TEXT UNIQUE NOT NULL ,First_name TEXT NOT NULL, Last_name TEXT , Roll TEXT PRIMARY KEY UNIQUE NOT NULL, code TEXT NOT NULL, contact TEXT NOT NULL, country TEXT, Class TEXT NOT NULL, address TEXT NOT NULL, Department TEXT NOT NULL, DOB TEXT, Email TEXT , Semester TEXT NOT NULL, Gender TEXT , L_URL TEXT,F_URL TEXT, PIC_LINK BLOB)")
             self.find_user = ("SELECT * FROM Std WHERE  Email= ?  or contact = ? or Roll = ? ")
             self.c.execute(str(self.find_user),(self.email.get(),self.contact.get(),self.Roll_no.get()))
             results = (self.c).fetchall()
@@ -540,7 +542,7 @@ class win1:
                 messagebox.showerror("Error","Roll No. or Contact or Email is already Used")
             else:
                 try:
-                    self.c.execute("INSERT INTO Std (Std_ID ,First_name  , Last_name  , Roll, code  , contact  , country , Class  , address  , Department  , DOB , Email  , Semester  , Gender  , L_URL ,F_URL , PIC_LINK  ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",(self.Std_ID.get(),self.fname.get(),self.lname.get(),self.Roll_no.get(),self.code.get(),self.contact.get(),self.con2,self.class_.get(),self.address.get(),self.dept.get(),self.DOB.get(),self.email.get(),self.sem.get(),self.gender.get(), self.Lurl.get(),self.furl.get(),self.filename))
+                    self.c.execute("INSERT INTO Std (Std_ID ,First_name  , Last_name  , Roll, code  , contact  , country , Class  , address  , Department  , DOB , Email  , Semester  , Gender  , L_URL ,F_URL , PIC_LINK  ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",(self.Std_ID.get(),self.fname.get(),self.lname.get(),self.Roll_no.get(),self.code.get(),self.contact.get(),self.con2,self.class_.get(),self.address.get(),self.dept.get(),self.DOB.get(),self.email.get(),self.sem.get(),self.gender.get(), self.Lurl.get(),self.furl.get(),self.image_data))
                     self.conn.commit()
                     self.c.close()
                     self.conn.close()
@@ -604,8 +606,11 @@ class win1:
             
 
     def update(self):
-        self.filename = filedialog.askopenfilename(initialdir = "/", title ="Upload Image", filetype=(("jpeg","*jpg"),("All Files","*.*"))) 
+        self.filename = filedialog.askopenfilename(initialdir="/", title="Upload Image", filetypes=(("JPEG files", "*.jpeg"), ("JPG files", "*.jpg"), ("All Files", "*.*")))
         self.lbl=Label(self.F4,text="")
+        with open(self.filename, 'rb') as f:
+            self.image_data = f.read()
+     
         self.con2 = str(region_code_for_country_code(self.code.get()))
         self.conn=sqlite3.connect("sdms.db")
         self.c=self.conn.cursor()
@@ -635,7 +640,7 @@ class win1:
                 """\" , Gender   =\""""+ self.gender.get()  +\
                 """\" , L_URL=\""""+ self.Lurl.get() +\
                 """\" , F_URL=\""""+ self.furl.get()+\
-                """\" , PIC_LINK =\""""+ self.filename+\
+                """\" , PIC_LINK =\""""+ self.image_data+\
                 """ \""""
                 y=y+" WHERE Roll= "+self.Roll_no.get()
                 print(str(y))              
@@ -687,6 +692,7 @@ class win1:
         self.searchval.set("")
         self.Student_table.delete(*self.Student_table.get_children())
         self.dele.set("Enter Roll No to Delete")
+        self.Student_table.pack_forget()
         
     def logout(self):
         self.read1=StringVar()

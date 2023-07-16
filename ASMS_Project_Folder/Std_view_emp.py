@@ -347,7 +347,7 @@ class win1:
 
                     btn_Fb = Button(self.F5,relief=RAISED,command=self.link12,image=self.icon1).place(x=80,y=410,anchor="w")
                     btn_LI = Button(self.F5,relief=RAISED,command=self.link11,height=23,image=self.icon2).place(x=20,y=410,anchor="w")
-                    lbl = Label(self.F5,text="Click on Screen To Hide Image",font=("times now roman",25,"bold"),bg="light gray").place(x=250,y=410,anchor="w")
+                    lbl = Label(self.F5,text="",font=("times now roman",25,"bold"),bg="light gray").place(x=250,y=410,anchor="w")
                     #print((i[16]))
                     winname=(str(i[1])+" "+str(i[2]))
                     c=i[16]
@@ -396,7 +396,7 @@ class win1:
                                     
                     btn_Fb = Button(self.F5,relief=RAISED,command=self.link12,image=self.icon1).place(x=80,y=410,anchor="w")
                     btn_LI = Button(self.F5,relief=RAISED,command=self.link11,height=23,image=self.icon2).place(x=20,y=410,anchor="w")
-                    lbl = Label(self.F5,text="Click on Screen To Hide Image",font=("times now roman",25,"bold"),bg="light gray").place(x=250,y=410,anchor="w")
+                    lbl = Label(self.F5,text="",font=("times now roman",25,"bold"),bg="light gray").place(x=250,y=410,anchor="w")
                     #print((i[16]))
                     winname=(str(i[1])+" "+str(i[2]))
                     c=i[16]
@@ -447,7 +447,7 @@ class win1:
                         self.link.set(i[16])
                         btn_Fb = Button(self.F5,relief=RAISED,command=self.link12,image=self.icon1).place(x=80,y=410,anchor="w")
                         btn_LI = Button(self.F5,relief=RAISED,command=self.link11,height=23,image=self.icon2).place(x=20,y=410,anchor="w")
-                        lbl = Label(self.F5,text="Click on Screen To Hide Image",font=("times now roman",25,"bold"),bg="light gray").place(x=250,y=410,anchor="w")
+                        lbl = Label(self.F5,text="",font=("times now roman",25,"bold"),bg="light gray").place(x=250,y=410,anchor="w")
                         #print((i[16]))
                         winname=(str(i[1])+" "+str(i[2]))
                         c=i[16]
