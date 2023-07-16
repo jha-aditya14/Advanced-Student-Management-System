@@ -177,7 +177,7 @@ class win2:
 
         lbl5 = Label(F2, text = "Follow Us On",fg="red",bg="white", font= ("times new roman",15)).place(x=150,y=350,anchor="c")
 
-        lbl6 = Label(F2, text = "Developed by Aditya Jha\n and \nGaurav Kr. Gupta",fg="#4863A0",bg="white", font= ("times new roman",15)).place(x=40,y=440)
+        lbl6 = Label(F2, text = "Developed by Aditya Jha\n",fg="#4863A0",bg="white", font= ("times new roman",15)).place(x=40,y=440)
 
 
         btn_login = Button(F2, text="Login",relief=FLAT,width =20,height=1,command=self.login2, font=("times new roman",14,"bold"),bg="#348017",foreground="#FEFCFF").grid(row = 3,column=0,padx=10,pady=25 )
